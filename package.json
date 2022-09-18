@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "release": "bumpp package.json"
+    "release": "bumpp package.json && pnpm publish --access public"
   },
   "peerDependencies": {
     "eslint": ">=7.4.0"

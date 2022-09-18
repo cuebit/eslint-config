@@ -8,6 +8,7 @@ module.exports = {
     '@typescript-eslint/comma-dangle': ['error', 'never'],
     // Vue
     'vue/attributes-order': 'off',
+    'vue/html-closing-bracket-newline': 'off',
     'vue/singleline-html-element-content-newline': 'off'
   }
 }

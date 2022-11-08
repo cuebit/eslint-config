@@ -30,6 +30,7 @@ module.exports = {
 
     // Vue
     'vue/attributes-order': 'off',
+    'vue/comma-dangle': ['error', 'never'],
     'vue/html-closing-bracket-newline': 'off',
     'vue/singleline-html-element-content-newline': 'off'
   }

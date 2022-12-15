@@ -1,5 +1,8 @@
 module.exports = {
   extends: '@antfu',
+  ignorePatterns: [
+    'README.md'
+  ],
   rules: {
     'curly': ['error', 'all'],
     'import/order': ['error', {

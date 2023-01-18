@@ -1,7 +1,12 @@
 module.exports = {
   extends: '@antfu',
-  ignorePatterns: [
-    'README.md'
+  overrides: [
+    {
+      files: ['*.test.ts', '*.spec.ts', '*.spec.js'],
+      rules: {
+        'no-console': 'off'
+      }
+    }
   ],
   rules: {
     'curly': ['error', 'all'],

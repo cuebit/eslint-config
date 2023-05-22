@@ -1,7 +1,7 @@
 {
   "name": "@cuebit/eslint-config",
   "version": "1.4.0",
-  "packageManager": "pnpm@8.3.1",
+  "packageManager": "pnpm@8.5.1",
   "description": "Opinionated ESLint config.",
   "author": "Cue <hello@cuebit.digital>",
   "license": "MIT",
@@ -23,12 +23,12 @@
     "eslint": ">=7.4.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^0.38.5"
+    "@antfu/eslint-config": "^0.39.1"
   },
   "devDependencies": {
     "@cuebit/eslint-config": "link:.",
     "bumpp": "^9.1.0",
-    "eslint": "^8.39.0",
+    "eslint": "^8.41.0",
     "typescript": "^5.0.4"
   }
 }

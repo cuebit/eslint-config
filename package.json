@@ -1,6 +1,6 @@
 {
   "name": "@cuebit/eslint-config",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "packageManager": "pnpm@8.6.8",
   "description": "Opinionated ESLint config.",
   "author": "Cue <hello@cuebit.digital>",

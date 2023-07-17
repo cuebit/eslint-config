@@ -42,6 +42,7 @@ module.exports = {
         properties: true
       }
     ],
+    'n/prefer-global/process': ['error', 'always'],
 
     // Typescript
     '@typescript-eslint/comma-dangle': ['error', 'never'],

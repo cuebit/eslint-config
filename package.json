@@ -1,7 +1,7 @@
 {
   "name": "@cuebit/eslint-config",
   "version": "1.8.3",
-  "packageManager": "pnpm@8.15.1",
+  "packageManager": "pnpm@8.15.4",
   "description": "Opinionated ESLint config.",
   "author": "Cue <hello@cuebit.digital>",
   "license": "MIT",
@@ -27,19 +27,19 @@
   },
   "devDependencies": {
     "@cuebit/eslint-config": "link:.",
-    "bumpp": "^9.3.0",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3"
+    "bumpp": "^9.4.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.2"
   },
   "pnpm": {
     "overrides": {
-      "@typescript-eslint/eslint-plugin": "^6.20.0",
-      "@typescript-eslint/parser": "^6.20.0",
+      "@typescript-eslint/eslint-plugin": "^6.21.0",
+      "@typescript-eslint/parser": "^6.21.0",
       "eslint-plugin-import": "npm:eslint-plugin-i@2.29.1",
       "eslint-plugin-jsonc": "^2.13.0",
       "eslint-plugin-n": "^16.6.2",
       "eslint-plugin-unicorn": "^50.0.1",
-      "eslint-plugin-vue": "^9.21.0",
+      "eslint-plugin-vue": "^9.23.0",
       "eslint-plugin-yml": "^1.12.2",
       "jsonc-eslint-parser": "^2.4.0"
     }

@@ -2,14 +2,18 @@
 
 ## Usage
 
+Install the package:
+
 ```bash
-pnpm add -D eslint @cuebit/eslint-config
+pnpm add -D @cuebit/eslint-config
 ```
 
-```json
-{
-  "extends": "@cuebit"
-}
+Add the following to `eslint.config.(m)js`:
+
+```js
+import config from '@cuebit/eslint-config'
+
+export default config()
 ```
 
 ## Thanks

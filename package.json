@@ -1,43 +1,49 @@
 {
   "name": "@cuebit/eslint-config",
-  "version": "1.9.2",
-  "packageManager": "pnpm@8.15.5",
+  "type": "module",
+  "version": "2.0.1-beta.4",
+  "packageManager": "pnpm@9.13.0",
   "description": "Opinionated ESLint config.",
   "author": "Cue <hello@cuebit.digital>",
   "license": "MIT",
   "homepage": "https://github.com/cuebit/eslint-config",
   "keywords": [
-    "eslint",
-    "eslint-config",
-    "eslint-preset"
+    "eslint-config"
   ],
-  "main": "index.js",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "index.js"
+    "dist"
   ],
   "scripts": {
-    "lint": "eslint --fix .",
-    "release": "bumpp package.json && pnpm publish --access public"
-  },
-  "peerDependencies": {
-    "eslint": ">=7.4.0"
+    "build": "tsup --format esm,cjs --clean --dts",
+    "stub": "tsup --format esm",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp package.json && pnpm publish --access public",
+    "prepublish": "pnpm run build",
+    "prepare": "pnpm run build"
   },
   "dependencies": {
-    "@antfu/eslint-config": "0.43.1",
-    "@typescript-eslint/eslint-plugin": "7.3.1",
-    "@typescript-eslint/parser": "7.3.1",
-    "eslint-plugin-import": "npm:eslint-plugin-i@2.29.1",
-    "eslint-plugin-jsonc": "^2.14.1",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-unicorn": "^51.0.1",
-    "eslint-plugin-vue": "^9.24.0",
-    "eslint-plugin-yml": "^1.13.2",
-    "jsonc-eslint-parser": "^2.4.0"
+    "@antfu/eslint-config": "3.8.0",
+    "defu": "^6.1.4",
+    "eslint": "9.14.0",
+    "eslint-flat-config-utils": "0.4.0",
+    "eslint-plugin-format": "0.1.2"
   },
   "devDependencies": {
     "@cuebit/eslint-config": "link:.",
-    "bumpp": "^9.4.0",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.3"
+    "bumpp": "^9.8.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
   }
 }

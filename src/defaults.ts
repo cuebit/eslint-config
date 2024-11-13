@@ -1,4 +1,4 @@
-import type { OptionsConfig, TypedFlatConfigItem } from '@antfu/eslint-config'
+import { type OptionsConfig, type TypedFlatConfigItem } from '@antfu/eslint-config'
 
 export const defaults: OptionsConfig & TypedFlatConfigItem = {
   typescript: {
@@ -19,6 +19,11 @@ export const defaults: OptionsConfig & TypedFlatConfigItem = {
   javascript: {
     overrides: {
       'symbol-description': 'off'
+    }
+  },
+  vue: {
+    overrides: {
+      'vue/custom-event-name-casing': ['error', 'kebab-case']
     }
   },
   rules: {

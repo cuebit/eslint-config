@@ -31,14 +31,15 @@
     "eslint": "catalog:"
   },
   "dependencies": {
-    "@antfu/eslint-config": "catalog:",
-    "defu": "catalog:"
+    "@antfu/eslint-config": "^4.8.1",
+    "defu": "^6.1.4"
   },
   "devDependencies": {
-    "bumpp": "catalog:",
+    "bumpp": "^10.0.3",
     "eslint": "catalog:",
-    "tsup": "catalog:",
-    "typescript": "catalog:"
+    "jiti": "^2.4.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

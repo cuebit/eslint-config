@@ -4,7 +4,7 @@ export default <OptionsConfig>{
   typescript: {
     tsconfigPath: 'tsconfig.json',
     overrides: {
-      'ts/method-signature-style': ['error', 'method']
+      'ts/method-signature-style': ['error', 'property']
     },
     overridesTypeAware: {
       'ts/strict-boolean-expressions': 'off'

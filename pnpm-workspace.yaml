@@ -1,2 +1,5 @@
 catalog:
-  eslint: ^9.22.0
+  eslint: ^9.31.0
+
+onlyBuiltDependencies:
+  - esbuild

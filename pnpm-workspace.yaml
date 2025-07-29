@@ -1,8 +1,5 @@
-overrides:
-  '@eslint/plugin-kit': ^0.3.3
-
 catalog:
-  eslint: ^9.31.0
+  eslint: ^9.32.0
 
 onlyBuiltDependencies:
   - esbuild

@@ -13,11 +13,6 @@ const defaultOptions: OptionsConfig & Omit<TypedFlatConfigItem, 'files'> = {
       'ts/strict-boolean-expressions': 'off'
     }
   },
-  stylistic: {
-    overrides: {
-      'style/comma-dangle': ['error', 'never']
-    }
-  },
   javascript: {
     overrides: {
       'symbol-description': 'off'

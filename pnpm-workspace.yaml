@@ -1,5 +1,5 @@
 catalog:
-  eslint: ^9.32.0
+  eslint: ^9.39.2
 
 onlyBuiltDependencies:
   - esbuild

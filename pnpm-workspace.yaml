@@ -4,6 +4,9 @@ shellEmulator: true
 strictPeerDependencies: false
 trustPolicy: off
 
+overrides:
+  esbuild: ^0.28.1
+
 catalog:
   '@antfu/eslint-config': ^9.2.0
   bumpp: ^12.1.1

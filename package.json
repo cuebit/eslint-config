@@ -2,45 +2,62 @@
   "name": "@cuebit/eslint-config",
   "type": "module",
   "version": "4.1.0",
-  "packageManager": "pnpm@10.25.0",
+  "packageManager": "pnpm@11.18.0",
   "description": "Opinionated ESLint config",
   "author": "Cue <hello@cuebit.dev>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/cuebit",
   "homepage": "https://github.com/cuebit/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuebit/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cuebit/eslint-config/issues"
+  },
   "keywords": [
-    "eslint",
-    "config"
+    "eslint-config"
   ],
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup --clean --dts",
-    "dev": "tsup --watch & pnpm dlx @eslint/config-inspector",
-    "lint": "eslint .",
+    "build": "tsdown --clean --dts",
+    "dev": "tsdown --watch & pnpm dlx @eslint/config-inspector",
+    "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp && pnpm publish",
-    "prepack": "pnpm build"
+    "release": "bumpp",
+    "prepack": "pnpm build",
+    "prepare": "simple-git-hooks"
   },
   "peerDependencies": {
     "eslint": "catalog:"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^6.6.1",
-    "defu": "^6.1.4",
-    "eslint-flat-config-utils": "^2.1.4"
+    "@antfu/eslint-config": "catalog:",
+    "defu": "catalog:",
+    "eslint-flat-config-utils": "catalog:"
   },
   "devDependencies": {
-    "bumpp": "^10.3.2",
+    "bumpp": "catalog:",
     "eslint": "catalog:",
-    "jiti": "^2.6.1",
-    "tsup": "^8.5.1",
-    "typescript": "^5.9.3"
+    "jiti": "catalog:",
+    "lint-staged": "catalog:",
+    "simple-git-hooks": "catalog:",
+    "tsdown": "catalog:",
+    "tsdown-stale-guard": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
